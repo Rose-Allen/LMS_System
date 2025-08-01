@@ -3,3 +3,19 @@ databaseChangeLog:
       id: 1
       author: "Dimash"
       changes: []
+
+  - include:
+      file: 001-create-courses.xml
+      relativeToChangelogFile: true
+
+  - include:
+      file: 002-create-chapters.xml
+      relativeToChangelogFile: true
+
+  - include:
+      file: 003-create-lessons.xml
+      relativeToChangelogFile: true
+
+  - include:
+      file: 004-insert-initial-data.xml
+      relativeToChangelogFile: true
