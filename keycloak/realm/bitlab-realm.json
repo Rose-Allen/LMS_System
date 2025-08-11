@@ -1,0 +1,78 @@
+{
+  "realm": "bitlab",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "internship-client",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "secret-key-for-client",
+      "redirectUris": [
+        "http://localhost:7070/*"
+      ],
+      "directAccessGrantsEnabled": true,
+      "authorizationServicesEnabled": true
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "ADMIN"
+      },
+      {
+        "name": "TEACHER"
+      },
+      {
+        "name": "USER"
+      }
+    ]
+  },
+  "users": [
+    {
+      "username": "dimash07a",
+      "email": "dimash07a@mail.ru",
+      "firstName": "Dimash",
+      "lastName": "Dimash",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin-password"
+        }
+      ],
+      "realmRoles": ["ADMIN"],
+      "clientRoles": {
+        "realm-management": ["manage-users", "view-users","manage-realm","view-realm"]
+      }
+    },
+    {
+      "username": "maxi06",
+      "email": "maxi06@mail.ru",
+      "firstName": "Maxi",
+      "lastName": "Max",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "teacher-password"
+        }
+      ],
+      "realmRoles": ["TEACHER"]
+    },
+    {
+      "username": "Qwerty444",
+      "email": "qwerty444@mail.ru",
+      "firstName": "Qwerty",
+      "lastName": "Qwerty",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "user-password"
+        }
+      ],
+      "realmRoles": ["USER"]
+    }
+  ]
+}

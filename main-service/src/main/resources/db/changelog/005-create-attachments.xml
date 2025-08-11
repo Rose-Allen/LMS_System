@@ -1,0 +1,26 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="005-create-attachments" author="you">
+        <createTable tableName="attachments">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="attachment_name" type="varchar(255)"/>
+            <column name="url" type="varchar(255)"/>
+            <column name="lesson_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_time" type="timestamp"/>
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseTableName="attachments" baseColumnNames="lesson_id"
+                referencedTableName="lessons" referencedColumnNames="id"
+                constraintName="fk_attachments_lesson"/>
+    </changeSet>
+</databaseChangeLog>

@@ -19,3 +19,7 @@ databaseChangeLog:
   - include:
       file: 004-insert-initial-data.xml
       relativeToChangelogFile: true
+  - include:
+      file: db/changelog/005-create-attachments.xml
+  - include:
+      file: db/changelog/006-lessons-add-create-time.xml

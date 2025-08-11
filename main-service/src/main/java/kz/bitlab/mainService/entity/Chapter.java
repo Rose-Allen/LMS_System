@@ -1,6 +1,5 @@
 package kz.bitlab.mainService.entity;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,37 +9,41 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
-@Table(name = "chapters")
-@AllArgsConstructor
-@NoArgsConstructor
+@Table(name = "chapter")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Chapter {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "chapter_name")
+    private String chapterName;
 
-    @Column(name = "description", columnDefinition = "TEXT")
-    private String description;
+    @Column(name = "chapter_description", columnDefinition = "TEXT")
+    private String chapterDescription;
 
-
-    @Column(name="chapter_order")
-    private Integer order;
+    @Column(name = "chapter_order")
+    private int chapterOrder;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "course_id")
+    @JoinColumn(name = "course_id", nullable = false)
     private Course course;
 
-    @Column(name = "createTime", nullable = false, updatable = false)
     @CreationTimestamp
-    private LocalDateTime createTime;
+    @Column(name = "created_time", nullable = false, updatable = false)
+    private LocalDateTime createdTime;
 
-    @Column(name = "updateTime")
     @UpdateTimestamp
-    private LocalDateTime updateTime;
+    @Column(name = "updated_time")
+    private LocalDateTime updatedTime;
+
+    @OneToMany(mappedBy = "chapter", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Lesson> lessonList;
 }

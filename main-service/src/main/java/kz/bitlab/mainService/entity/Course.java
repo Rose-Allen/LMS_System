@@ -10,30 +10,35 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 
 @Entity
-@Table(name = "courses")
-@AllArgsConstructor
-@NoArgsConstructor
+@Table(name = "course")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Course {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "course_name")
+    private String courseName;
 
-    @Column(name = "description",columnDefinition = "TEXT")
-    private String description;
+    @Column(name = "course_description")
+    private String courseDescription;
 
-    @Column(name = "createTime", nullable = false, updatable = false)
     @CreationTimestamp
-    private LocalDateTime createTime;
+    @Column(name = "created_time", updatable = false)
+    private LocalDateTime createdTime;
 
-    @Column(name = "updateTime")
     @UpdateTimestamp
-    private LocalDateTime updateTime;
+    @Column(name = "updated_time")
+    private LocalDateTime updatedTime;
+
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Chapter> chapterList;
 }

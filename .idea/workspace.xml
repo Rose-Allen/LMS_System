@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dfe3fc95-af57-424e-bd2c-e3aec43bfd1d" name="Changes" comment="added migrate and repository">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keycloak/realm/bitlab-realm.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/config/KeycloakRoleConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/config/MinioConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/controller/ChapterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/controller/CourseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/controller/FileServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/controller/LessonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/dto/AttachmentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/dto/ChapterDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/dto/CourseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/dto/LessonDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/entity/Attachment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/mapper/AttachmentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/mapper/ChapterMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/mapper/CourseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/mapper/LessonMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/repository/AttachmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/services/ChapterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/services/CourseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/services/LessonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/services/minio/AttachmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/services/serviceImpl/ChapterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/services/serviceImpl/CourseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/services/serviceImpl/LessonServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/resources/db/changelog/005-create-attachments.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main-service/src/main/resources/db/changelog/006-lessons-add-create-time.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/entity/Chapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/entity/Chapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/entity/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/entity/Lesson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/repository/ChapterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/repository/ChapterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/repository/LessonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/java/kz/bitlab/mainService/repository/LessonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-service/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/main-service/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rose-Allen&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rose-Allen/LMS_System.git&quot;,
+    &quot;accountId&quot;: &quot;e72909bc-9d7c-4c74-b07d-5ba8dc45e1d3&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="30Bli5eXCeoWiZcURvcHWwppxYb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/проекты/Java/LMS_System/main-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\проекты\Java\LMS_System\main-service\src\main\java\kz\bitlab\mainService" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dfe3fc95-af57-424e-bd2c-e3aec43bfd1d" name="Changes" comment="" />
+      <created>1753108973766</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753108973766</updated>
+      <workItem from="1753108976438" duration="1253000" />
+      <workItem from="1754086739639" duration="114000" />
+      <workItem from="1754863210601" duration="824000" />
+      <workItem from="1754920302456" duration="8034000" />
+    </task>
+    <task id="LOCAL-00001" summary="added migrate and repository">
+      <option name="closed" value="true" />
+      <created>1754086767056</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754086767056</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added migrate and repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="added migrate and repository" />
+  </component>
+</project>

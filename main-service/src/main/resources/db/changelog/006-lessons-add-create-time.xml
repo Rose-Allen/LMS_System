@@ -1,0 +1,14 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="006-lessons-add-create-time" author="you">
+        <addColumn tableName="lessons">
+            <column name="create_time" type="timestamp" defaultValueComputed="NOW()"/>
+        </addColumn>
+        <addNotNullConstraint tableName="lessons" columnName="create_time" columnDataType="timestamp"/>
+    </changeSet>
+</databaseChangeLog>
